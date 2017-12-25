@@ -1,0 +1,50 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Looper",
+    "version": "1.0",
+
+    "description": "Allows YouTube video looping.",
+    
+    "icons": {
+        "48": "icons/48White.png",
+        "96": "icons/96White.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["jquery-3.2.1.slim.min.js", "looper.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "alarms",
+        "bookmarks",
+        "browsingData",
+        "browserSettings",
+        "contextMenus",
+        "contextualIdentities",
+        "cookies",
+        "downloads",
+        "downloads.open",
+        "find",
+        "geolocation",
+        "history",
+        "identity",
+        "idle",
+        "management",
+        "menus",
+        "nativeMessaging",
+        "notifications",
+        "privacy",
+        "proxy",
+        "sessions",
+        "storage",
+        "tabs",
+        "theme",
+        "topSites",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking"
+    ]
+}
