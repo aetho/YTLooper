@@ -6,14 +6,15 @@
     "description": "Allows YouTube video looping.",
     
     "icons": {
-        "48": "icons/48White.png",
-        "96": "icons/96White.png"
+        "48": "icons/48Black.png",
+        "96": "icons/96Black.png"
     },
 
     "content_scripts": [
         {
+            "run_at": "document_idle",
             "matches": ["*://*.youtube.com/*"],
-            "js": ["jquery-3.2.1.slim.min.js", "looper.js"]
+            "js": ["jquery-3.2.1.slim.min.js","looper.js"]
         }
     ],
     "permissions": [
