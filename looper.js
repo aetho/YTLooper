@@ -2,11 +2,15 @@ let timer = setInterval(function () {
     Inject();
 }, 250);
 
+let isInjecting = false;
+
 function Inject() {
+    if (isInjecting) return;
     console.log($('.ytp-loop-button').length)
     console.log($('.ytp-looping-menu').length)
     if ($('.ytp-loop-button').length > 0 && $('.ytp-looping-menu').length > 0) return clearInterval(timer);
 
+    isInjecting = true;
     $('.ytp-right-controls').ready(function () {
         console.log('RIGHT CONTROLS:', $('.ytp-right-controls'));
         // Inject loop button
@@ -119,4 +123,5 @@ function Inject() {
             });
         });
     });
+    isInjecting = true;
 };
