@@ -14,6 +14,7 @@
         {
             "run_at": "document_start",
             "matches": ["*://*.youtube.com/*"],
+            "css": ["looper.css"],
             "js": ["jquery-3.2.1.slim.min.js","looper.js"]
         }
     ],
