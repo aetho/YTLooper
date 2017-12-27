@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "YouTube Looper",
+    "name": "YTLooper",
     "version": "1.0",
 
-    "description": "Allows YouTube video looping.",
+    "description": "Allows you to loop YouTube videos with one click.",
     
     "icons": {
         "48": "icons/48Black.png",
@@ -12,40 +12,10 @@
 
     "content_scripts": [
         {
-            "run_at": "document_idle",
+            "run_at": "document_start",
             "matches": ["*://*.youtube.com/*"],
             "js": ["jquery-3.2.1.slim.min.js","looper.js"]
         }
     ],
-    "permissions": [
-        "activeTab",
-        "alarms",
-        "bookmarks",
-        "browsingData",
-        "browserSettings",
-        "contextMenus",
-        "contextualIdentities",
-        "cookies",
-        "downloads",
-        "downloads.open",
-        "find",
-        "geolocation",
-        "history",
-        "identity",
-        "idle",
-        "management",
-        "menus",
-        "nativeMessaging",
-        "notifications",
-        "privacy",
-        "proxy",
-        "sessions",
-        "storage",
-        "tabs",
-        "theme",
-        "topSites",
-        "webNavigation",
-        "webRequest",
-        "webRequestBlocking"
-    ]
+    "permissions": []
 }
