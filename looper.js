@@ -1,8 +1,7 @@
+let isInjecting = false;
 let timer = setInterval(function () {
     Inject();
 }, 250);
-
-let isInjecting = false;
 
 function Inject() {
     if (isInjecting) return;
@@ -123,5 +122,5 @@ function Inject() {
             });
         });
     });
-    isInjecting = true;
+    isInjecting = false;
 };
