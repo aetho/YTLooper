@@ -1,15 +1,13 @@
-let isInjecting = false;
+// let isInjecting = false;
 let timer = setInterval(function () {
-    Inject();
+    console.log($('.ytp-right-controls').length, $('.video-stream').length);
+    if ($('.ytp-right-controls').length > 0 && $('.video-stream').length > 0) {
+        Inject();
+        clearInterval(timer);
+    }
 }, 250);
 
 function Inject() {
-    if (isInjecting) return;
-    console.log($('.ytp-loop-button').length)
-    console.log($('.ytp-looping-menu').length)
-    if ($('.ytp-loop-button').length > 0 && $('.ytp-looping-menu').length > 0) return clearInterval(timer);
-
-    isInjecting = true;
     $('.ytp-right-controls').ready(function () {
         console.log('RIGHT CONTROLS:', $('.ytp-right-controls'));
         // Inject loop button
@@ -122,5 +120,4 @@ function Inject() {
             });
         });
     });
-    isInjecting = false;
 };
